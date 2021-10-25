@@ -11,7 +11,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(page_title='The Machine Learning App',
     layout='wide')
 
-df = pd.read_csv('Dataset/energydatanew.csv',parse_dates=['date'])
+df = pd.read_csv('energydatanew.csv',parse_dates=['date'])
 df.index = pd.to_datetime(df['date'])
 def temporal_train_test_split(test_start_ind):
     train_set = df[:test_start_ind]['Appliances']
